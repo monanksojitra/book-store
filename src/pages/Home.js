@@ -13,9 +13,9 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <h1>Home form Home.js</h1>
-        <Titel title={this.state.title} dis={this.state.dis} />
-        
+        <h1>Home form Home.js</h1> 
+        <h3>{this.state.title}</h3>
+        <h3>{this.state.dis}</h3>
       </div>
     )
   }

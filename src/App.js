@@ -1,16 +1,26 @@
+import React from 'react'
+import About from './pages/About'
+import Home from './pages/Home'
 
+export default function App() {
 
-import Counter from './component/Counter';
+  const [sethome,setAbout] = React.useState("Home")
 
-import Home from './pages/Home';
+  const xchang = ()=>{
+    if (sethome === "Home") {
 
-function App() {
+      setAbout("About")
+      
+    }
+    else{
+      setAbout("Home")
+    }
+  }
   return (
-    <>
-    <Home titel={"this is propes titel pass by Home"} dis={"this is description fro Home"}/>
-    <Counter/>
-    </>
-  );
+    <div>
+      <h3>Click for changing page</h3>
+      <button onClick={xchang}>Click</button>
+      {sethome === "Home" ? <Home/> : <About/>}
+    </div>
+  )
 }
-
-export default App;
