@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Titel from '../component/Titel';
 
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -14,6 +15,7 @@ class Home extends Component {
       <div>
         <h1>Home form Home.js</h1>
         <Titel title={this.state.title} dis={this.state.dis} />
+        
       </div>
     )
   }
