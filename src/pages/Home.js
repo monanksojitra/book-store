@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import List from '../component/List';
 // import Titel from '../component/Titel';
+import Counter from '../component/Counter'
+
 
 
 class Home extends Component {
@@ -18,6 +20,7 @@ class Home extends Component {
         <h3>{this.state.title}</h3>
         <h3>{this.state.dis}</h3>
         <List/>
+        <Counter/>
       </div>
     )
   }
