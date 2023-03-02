@@ -1,4 +1,6 @@
 import React from 'react'
+import LoginForm from './component/LoginForm'
+import Navbar from './component/Navbar'
 import About from './pages/About'
 import Home from './pages/Home'
 
@@ -18,9 +20,11 @@ export default function App() {
   }
   return (
     <div>
+      <Navbar/>
+      {sethome === "Home" ? <Home/> : <About/>}
+      <LoginForm/>
       <h3>Click for changing page</h3>
       <button onClick={xchang}>Click</button>
-      {sethome === "Home" ? <Home/> : <About/>}
     </div>
   )
 }
