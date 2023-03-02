@@ -22,9 +22,9 @@ export default function App() {
     <div>
       <Navbar/>
       {sethome === "Home" ? <Home/> : <About/>}
-      <LoginForm/>
       <h3>Click for changing page</h3>
       <button onClick={xchang}>Click</button>
+      <LoginForm/>
     </div>
   )
 }
