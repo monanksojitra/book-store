@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 
-export default class Counter extends Component {
+export default class Counter extends PureComponent {
   constructor() {
     super()
     this.state = {
@@ -8,18 +8,6 @@ export default class Counter extends Component {
     }
 
   }
-  shouldComponentUpdate(_nextProps) {
-    if (_nextProps.value === this.props.value) {
-     
-      return true;
-    }
-    else {
-      
-      return false;
-    }
-  }
-
-
   render() {
     return (
       <div>
