@@ -1,7 +1,7 @@
 import React from 'react'
 import '../css/titel.css'
 
-export default function Titel(prope) {
+ const Titel= (prope)=> {
   return (
     <div>
     <h1 className='titel'>Titel form</h1>
@@ -12,4 +12,4 @@ export default function Titel(prope) {
   </div>
   )
 }
-
+export default React.memo(Titel)
