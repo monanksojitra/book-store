@@ -1,4 +1,5 @@
 import React from 'react'
+import Focusinput from './component/Focusinput'
 import LoginForm from './component/LoginForm'
 import Navbar from './component/Navbar'
 import About from './pages/About'
@@ -20,11 +21,12 @@ export default function App() {
   }
   return (
     <div>
-      <Navbar/>
+      {/* <Navbar/>
       {sethome === "Home" ? <Home/> : <About/>}
       <h3>Click for changing page</h3>
       <button onClick={xchang}>Click</button>
-      <LoginForm/>
+      <LoginForm/> */}
+      <Focusinput/>
     </div>
   )
 }
