@@ -1,39 +1,44 @@
-import React from 'react'
-import Focusinput from './component/Focusinput'
-import LoginForm from './component/LoginForm'
-import Navbar from './component/Navbar'
-import RenderPropsCom from './component/RenderPropsCom'
-import About from './pages/About'
-import Home from './pages/Home'
+import React from "react";
+import C1 from "./component/C1";
+import { Usercontext } from "./component/Context";
 
-export default function App() {
+import Focusinput from "./component/Focusinput";
+import LoginForm from "./component/LoginForm";
+import Navbar from "./component/Navbar";
+import RenderPropsCom from "./component/RenderPropsCom";
 
-  const [sethome,setAbout] = React.useState("Home")
+import About from "./pages/About";
+import Home from "./pages/Home";
 
-  const xchang = ()=>{
+function App() {
+  const [sethome, setAbout] = React.useState("Home");
+  const Contextmain = React.createContext("this is from app");
+
+
+  const xchang = () => {
     if (sethome === "Home") {
-
-      setAbout("About")
-      
+      setAbout("About");
+    } else {
+      setAbout("Home");
     }
-    else{
-      setAbout("Home")
-    }
-  }
+  };
   return (
-    <div>
+    <>
+ 
       {/* <Navbar/>
       {sethome === "Home" ? <Home/> : <About/>}
       <h3>Click for changing page</h3>
       <button onClick={xchang}>Click</button>
       <LoginForm/> */}
       {/* <Focusinput/> */}
-      <Home/>
+      {/* <Home/>
       <RenderPropsCom render={()=>{
         return(
           <h3>I am coming form render propes</h3>
         )
-      }}/>
-    </div>
-  )
+      }}/> */}
+      <Usercontext.Provider value="this from app"><C1/></Usercontext.Provider>
+    </>
+  );
 }
+export default App
