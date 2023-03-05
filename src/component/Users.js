@@ -11,7 +11,7 @@ class Users  extends Component {
         }
     }
     componentDidMount() {
-        axios.get('https://jsonplaceholder.typicode.com/posts')
+        axios.get('https://jsonplaceholder.typicode.com/users')
             .then(Response => {this.setState({list:Response.data}) })
             .catch(erre => { console.log(erre) })
     }
