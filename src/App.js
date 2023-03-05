@@ -2,6 +2,7 @@ import React from 'react'
 import Focusinput from './component/Focusinput'
 import LoginForm from './component/LoginForm'
 import Navbar from './component/Navbar'
+import RenderPropsCom from './component/RenderPropsCom'
 import About from './pages/About'
 import Home from './pages/Home'
 
@@ -28,6 +29,11 @@ export default function App() {
       <LoginForm/> */}
       {/* <Focusinput/> */}
       <Home/>
+      <RenderPropsCom render={()=>{
+        return(
+          <h3>I am coming form render propes</h3>
+        )
+      }}/>
     </div>
   )
 }
