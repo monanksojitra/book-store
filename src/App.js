@@ -26,7 +26,8 @@ export default function App() {
       <h3>Click for changing page</h3>
       <button onClick={xchang}>Click</button>
       <LoginForm/> */}
-      <Focusinput/>
+      {/* <Focusinput/> */}
+      <Home/>
     </div>
   )
 }
