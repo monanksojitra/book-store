@@ -12,7 +12,10 @@ code {
     monospace;
 }
 div{
-  display: inline;
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+p{
+  margin: 20px;
 }
