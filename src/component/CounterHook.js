@@ -1,12 +1,17 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function CounterHook() {
-    const [count,setcount]=useState(0)
-  const updatecount = ()=>{setcount(count+1)}
+  const [count, setcount] = useState(0)
+  const updatecount = () => { setcount(count + 1) }
+
+  useEffect(() => {
+    document.title = count
+  }, [count])
+
 
   return (
     <div>
-      <button onClick={updatecount}>Live Counter is {count}</button>
+      <button id='counter' onClick={updatecount}>Live Counter is {count}</button>
     </div>
   )
 }
