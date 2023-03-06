@@ -2,6 +2,7 @@ import React from "react";
 import LoginForm2 from "./component/LoginForm2"
 import CounterHook from "./component/CounterHook";
 import Post from "./component/Post";
+import UsersHook from "./component/UsersHook";
 // import Users from "./component/Users";
 // import C1 from "./component/C1";
 // import { Usercontext } from "./component/Context";
@@ -45,7 +46,8 @@ function App() {
       {/* <Users/> */}
       {/* <Post/> */}
       {/* <CounterHook/> */}
-      <LoginForm2/>
+      {/* <LoginForm2/> */}
+      <UsersHook/>
     </>
   );
 }
