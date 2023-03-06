@@ -1,4 +1,5 @@
 import React from "react";
+import CounterHook from "./component/CounterHook";
 import Post from "./component/Post";
 // import Users from "./component/Users";
 // import C1 from "./component/C1";
@@ -41,7 +42,8 @@ function App() {
         }}/> */}
       {/* <Usercontext.Provider value="this from app"><C1/></Usercontext.Provider> */}
       {/* <Users/> */}
-      <Post/>
+      {/* <Post/> */}
+      <CounterHook/>
     </>
   );
 }
