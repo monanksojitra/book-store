@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Usercontext } from './Context'
 
 export default function C2() {
+  const user = useContext(Usercontext)
   return (
     <div>
-        <Usercontext.Consumer>
+      {user}
+        {/* <Usercontext.Consumer>
     {value =>
       <h1>hello{value}</h1>
     }
-        </Usercontext.Consumer>
+        </Usercontext.Consumer> */}
+
     </div>
   )
 }

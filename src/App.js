@@ -6,8 +6,8 @@ import UsersHook from "./component/UsersHook";
 import PostDetail from "./component/PostDetail";
 
 // import Users from "./component/Users";
-// import C1 from "./component/C1";
-// import { Usercontext } from "./component/Context";
+import C1 from "./component/C1";
+import { Usercontext } from "./component/Context";
 
 // import Focusinput from "./component/Focusinput";
 // import LoginForm from "./component/LoginForm";
@@ -19,7 +19,7 @@ import PostDetail from "./component/PostDetail";
 
 function App() {
 //   const [sethome, setAbout] = React.useState("Home");
-//   const Contextmain = React.createContext("this is from app");
+  const Contextmain = React.createContext("this is from app");
 
 
   // const xchang = () => {
@@ -44,13 +44,13 @@ function App() {
           <h3>I am coming form render propes</h3>
           )
         }}/> */}
-      {/* <Usercontext.Provider value="this from app"><C1/></Usercontext.Provider> */}
+      <Usercontext.Provider value="this from app"><C1/></Usercontext.Provider>
       {/* <Users/> */}
       {/* <Post/> */}
       {/* <CounterHook/> */}
       {/* <LoginForm2/> */}
       {/* <UsersHook/> */}
-      <PostDetail/>
+      {/* <PostDetail/> */}
     </>
   );
 }
