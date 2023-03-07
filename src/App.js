@@ -3,6 +3,7 @@ import LoginForm2 from "./component/LoginForm2"
 import CounterHook from "./component/CounterHook";
 import Post from "./component/Post";
 import UsersHook from "./component/UsersHook";
+import PostDetail from "./component/PostDetail";
 
 // import Users from "./component/Users";
 // import C1 from "./component/C1";
@@ -48,8 +49,8 @@ function App() {
       {/* <Post/> */}
       {/* <CounterHook/> */}
       {/* <LoginForm2/> */}
-      <UsersHook/>
-      
+      {/* <UsersHook/> */}
+      <PostDetail/>
     </>
   );
 }
