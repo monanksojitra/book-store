@@ -19,9 +19,7 @@ class Users  extends Component {
         const { list } = this.state
         console.log(list)
         return (
-            <div>
-              {list?list.map(list => (
-          <UserDetail main={list} key={list.id + list.name} />
+            <div>{list?list.map(list => ( <UserDetail main={list} key={list.id + list.name} />
         )):null}
             </div>
         )

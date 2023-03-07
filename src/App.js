@@ -8,6 +8,7 @@ import PostDetail from "./component/PostDetail";
 // import Users from "./component/Users";
 import C1 from "./component/C1";
 import { Usercontext } from "./component/Context";
+import CounterReduces from "./component/CounterReduces";
 
 // import Focusinput from "./component/Focusinput";
 // import LoginForm from "./component/LoginForm";
@@ -44,13 +45,14 @@ function App() {
           <h3>I am coming form render propes</h3>
           )
         }}/> */}
-      <Usercontext.Provider value="this from app"><C1/></Usercontext.Provider>
+      {/* <Usercontext.Provider value="this from app"><C1/></Usercontext.Provider> */}
       {/* <Users/> */}
       {/* <Post/> */}
       {/* <CounterHook/> */}
       {/* <LoginForm2/> */}
       {/* <UsersHook/> */}
       {/* <PostDetail/> */}
+      <CounterReduces/>
     </>
   );
 }
