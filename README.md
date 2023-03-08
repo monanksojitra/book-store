@@ -1,4 +1,4 @@
-Book-Store React Web Application
+<h1>Book-Store React Web Application</h1>
 This is a web application for a book store built using React. It allows users to view, search and buy books online. The application has the following features:
 
 View all books available in the store
