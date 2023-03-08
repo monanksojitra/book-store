@@ -1,13 +1,15 @@
 import React, { useContext, useEffect, useState ,memo} from 'react'
+import { Newuser } from './C1'
 import { Usercontext } from './Context'
 
 function C2() {
   // const user = useContext(Usercontext)
+  const perentcontext = useContext(Newuser)
   const [count,setCount] = useState(0)
   console.log('child 2 render')
   return (
     <div>
-      <p>This is Child count</p>
+      <p>This is count by perent in C2 {perentcontext}</p>
       <button onClick={()=>{setCount(pre=>pre+1)}}>{count} child 2</button>
     
       {/* {user} */}
