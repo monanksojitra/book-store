@@ -60,7 +60,8 @@ function App() {
       {/* <Posst_useReducer/> */}
       {/* <RegisterUser/> */}
       {/* <NewForm/> */}
-      <UpdatedCounter_useReducer/>
+      {/* <UpdatedCounter_useReducer/> */}
+      <C1/>
     </>
   );
 }
