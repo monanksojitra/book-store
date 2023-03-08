@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function UserDetail({main}) {
+function UserDetail({main}) {
   return (
     <div>
       <h2>{main.id}</h2>
@@ -12,3 +12,4 @@ export default function UserDetail({main}) {
     </div>
   )
 }
+export default React.memo(UserDetail)
