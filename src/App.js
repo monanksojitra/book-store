@@ -9,6 +9,7 @@ import PostDetail from "./component/PostDetail";
 import C1 from "./component/C1";
 import { Usercontext } from "./component/Context";
 import CounterReduces from "./component/CounterReduces";
+import Posst_useReducer from "./component/Post_useReducer";
 
 // import Focusinput from "./component/Focusinput";
 // import LoginForm from "./component/LoginForm";
@@ -52,7 +53,8 @@ function App() {
       {/* <LoginForm2/> */}
       {/* <UsersHook/> */}
       {/* <PostDetail/> */}
-      <CounterReduces/>
+      {/* <CounterReduces/> */}
+      <Posst_useReducer/>
     </>
   );
 }
