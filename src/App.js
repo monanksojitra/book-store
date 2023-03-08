@@ -12,6 +12,7 @@ import CounterReduces from "./component/CounterReduces";
 import Posst_useReducer from "./component/Post_useReducer";
 import RegisterUser from "./component/RegisterUser";
 import NewForm from "./component/NewForm";
+import UpdatedCounter_useReducer from "./component/UpdatedCounter_useReducer";
 
 // import Focusinput from "./component/Focusinput";
 // import LoginForm from "./component/LoginForm";
@@ -58,7 +59,8 @@ function App() {
       {/* <CounterReduces/> */}
       {/* <Posst_useReducer/> */}
       {/* <RegisterUser/> */}
-      <NewForm/>
+      {/* <NewForm/> */}
+      <UpdatedCounter_useReducer/>
     </>
   );
 }
