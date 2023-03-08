@@ -1,14 +1,14 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState ,memo} from 'react'
 import { Usercontext } from './Context'
 
-export default function C2() {
+function C2() {
   // const user = useContext(Usercontext)
   const [count,setCount] = useState(0)
-  console.log('child render')
+  console.log('child 2 render')
   return (
     <div>
       <p>This is Child count</p>
-      <button onClick={()=>{setCount(pre=>pre+1)}}>child{count}</button>
+      <button onClick={()=>{setCount(pre=>pre+1)}}>{count} child 2</button>
     
       {/* {user} */}
         {/* <Usercontext.Consumer>
@@ -20,3 +20,4 @@ export default function C2() {
     </div>
   )
 }
+export default memo(C2)
