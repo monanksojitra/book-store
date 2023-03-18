@@ -1,18 +1,19 @@
 import React from "react";
-import LoginForm2 from "./component/LoginForm2"
-import CounterHook from "./component/CounterHook";
-import Post from "./component/Post";
-import UsersHook from "./component/UsersHook";
-import PostDetail from "./component/PostDetail";
+// import LoginForm2 from "./component-test/LoginForm2"
+// import CounterHook from "./component-test/CounterHook";
+// import Post from "./component-test/Post";
+// import UsersHook from "./component-test/UsersHook";
+// import PostDetail from "./component-test/PostDetail";
 
-// import Users from "./component/Users";
-import C1 from "./component/C1";
-import { Usercontext } from "./component/Context";
-import CounterReduces from "./component/CounterReduces";
-import Posst_useReducer from "./component/Post_useReducer";
-import RegisterUser from "./component/RegisterUser";
-import NewForm from "./component/NewForm";
-import UpdatedCounter_useReducer from "./component/UpdatedCounter_useReducer";
+// import Users from "./component-test/Users";
+// import C1 from "./component-test/C1";
+// import { Usercontext } from "./component-test/Context";
+// import CounterReduces from "./component-test/CounterReduces";
+// import Posst_useReducer from "./component-test/Post_useReducer";
+// import RegisterUser from "./component-test/RegisterUser";
+// import NewForm from "./component-test/NewForm";
+// import UpdatedCounter_useReducer from "./component-test/UpdatedCounter_useReducer";
+import Navbar from "./components/Navbar";
 
 // import Focusinput from "./component/Focusinput";
 // import LoginForm from "./component/LoginForm";
@@ -36,6 +37,7 @@ function App() {
   // };
   return (
     <>
+    <Navbar/>
  
       {/* <Navbar/>
       {sethome === "Home" ? <Home/> : <About/>}
@@ -61,7 +63,7 @@ function App() {
       {/* <RegisterUser/> */}
       {/* <NewForm/> */}
       {/* <UpdatedCounter_useReducer/> */}
-      <C1/>
+      {/* <C1/> */}
     </>
   );
 }

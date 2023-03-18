@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import List from '../component/List';
+import List from '../component-test/List';
 // import Titel from '../component/Titel';
-import Counter from '../component/Counter'
-import UserList from '../component/UserList';
-import HOC from '../component/HOC';
+import Counter from '../component-test/Counter'
+import UserList from '../component-test/UserList';
+import HOC from '../component-test/HOC';
 
 
 
