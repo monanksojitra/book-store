@@ -1,4 +1,8 @@
-import React from "react";
+import { React } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AddProduct from "./components/AddProduct";
+import Login from "./components/Login";
+
 // import LoginForm2 from "./component-test/LoginForm2"
 // import CounterHook from "./component-test/CounterHook";
 // import Post from "./component-test/Post";
@@ -14,6 +18,9 @@ import React from "react";
 // import NewForm from "./component-test/NewForm";
 // import UpdatedCounter_useReducer from "./component-test/UpdatedCounter_useReducer";
 import Navbar from "./components/Navbar";
+import Registration from "./components/Registration";
+import Cart from "./components/Cart";
+
 
 // import Focusinput from "./component/Focusinput";
 // import LoginForm from "./component/LoginForm";
@@ -25,7 +32,6 @@ import Navbar from "./components/Navbar";
 
 function App() {
 //   const [sethome, setAbout] = React.useState("Home");
-  const Contextmain = React.createContext("this is from app");
 
 
   // const xchang = () => {
@@ -37,7 +43,21 @@ function App() {
   // };
   return (
     <>
-    <Navbar/>
+    <BrowserRouter>
+    <Routes>
+    <Route path="/" element={<Navbar />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/addproduct" element={<AddProduct />} />
+          <Route path="/registration" element={<Registration />} />
+          <Route path="/cart"  element={<Cart />} />
+        </Route>
+    </Routes>
+    </BrowserRouter>
+ 
+    {/* <Navbar/>  */}
+
+
+
  
       {/* <Navbar/>
       {sethome === "Home" ? <Home/> : <About/>}

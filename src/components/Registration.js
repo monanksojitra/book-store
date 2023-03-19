@@ -11,7 +11,7 @@ const Registration = () => {
       <div className="modal-dialog" role="document">
         <div className="modal-content rounded-4 shadow">
           <div className="modal-header p-5 pb-4 border-bottom-0">
-            {/* <h1 class="modal-title fs-5" >Modal title</h1> */}
+            
             <h1 className="fw-bold mb-0 fs-2">Registration for free</h1>
             <button
               type="button"
