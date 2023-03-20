@@ -20,19 +20,19 @@ import Login from "./components/Login";
 import Navbar from "./components/Navbar";
 import Registration from "./components/Registration";
 import Cart from "./components/Cart";
-
+import Home from "./pages/Home";
+import CategoryBook from "./components/CategoryBook";
 
 // import Focusinput from "./component/Focusinput";
 // import LoginForm from "./component/LoginForm";
 // import Navbar from "./component/Navbar";
 // import RenderPropsCom from "./component/RenderPropsCom";
 
-// import About from "./pages/About";
+import About from "./pages/About";
 // import Home from "./pages/Home";
 
 function App() {
-//   const [sethome, setAbout] = React.useState("Home");
-
+  //   const [sethome, setAbout] = React.useState("Home");
 
   // const xchang = () => {
   //   if (sethome === "Home") {
@@ -43,22 +43,29 @@ function App() {
   // };
   return (
     <>
-    <BrowserRouter>
-    <Routes>
-    <Route path="/" element={<Navbar />}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" exact element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/about" element={<About />} />
           <Route path="/addproduct" element={<AddProduct />} />
           <Route path="/registration" element={<Registration />} />
-          <Route path="/cart"  element={<Cart />} />
-        </Route>
-    </Routes>
-    </BrowserRouter>
- 
-    {/* <Navbar/>  */}
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/Internet" element={<CategoryBook category="Internet"/>}/>
+          <Route path="/Java" element={<CategoryBook category={"Java"} />} />
+          <Route
+            path="/PowerBuilder"
+            element={<CategoryBook category={"PowerBuilder"} />}
+          />
+          <Route
+            path="/Programming"
+            element={<CategoryBook category={"Programming"} />}
+          />
+        </Routes>
+      </BrowserRouter>
 
+      {/* <Navbar/>  */}
 
-
- 
       {/* <Navbar/>
       {sethome === "Home" ? <Home/> : <About/>}
       <h3>Click for changing page</h3>
@@ -87,4 +94,4 @@ function App() {
     </>
   );
 }
-export default App
+export default App;

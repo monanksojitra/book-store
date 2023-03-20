@@ -8,9 +8,7 @@ import AddProduct from "./AddProduct";
 import ProductSearchbar from "./ProductSearchbar";
 import ReadMore from "./ReadMore";
 import { BrowserRouter, Link, Routes } from "react-router-dom";
-const Navbar = () => {
-  const [filterBook, setfilterBook] = useState([]);
-  console.log("this is ", filterBook);
+const Navbar = () => { 
   return (
     <>
     
@@ -98,23 +96,11 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-        <AdsBook />
-      <div className="container d-flex flex-wrap justify-content-center my-4">
-        <a
-          href="/"
-          className="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none"
-        >
-         
-          <span className="fs-4">List of All Books</span>
-        </a>
-        <form className="col-12 col-lg-auto mb-3 mb-lg-0" role="search">
-          <ProductSearchbar setBook={setfilterBook}  />
-          
-        </form>
-      </div>
+        
+     
 
       {/* <Registration/> */}
-      <Products newBooks={filterBook} />
+    
       {/* <Cart/> */}
       {/* <AddProduct/> */}
       {/* <ReadMore/> */}
