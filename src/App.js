@@ -57,9 +57,10 @@ const App = ()=> {
           <Route path="/" exact element={<Home/>} />
           
           <Route path="/about" element={<About />} />
-          <Route path="/login" element={<Login/>} />
+          <Route path="/Login" element={<Login/>} />
+          
           <Route path="/addproduct" element={<AddProduct />} />
-          <Route path="/registration" element={<Registration />} />
+          <Route path="/Register" element={<Registration />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/readmore" element={<ReadMore />} />
           <Route path="/Internet" element={<CategoryBook category="Internet"/>}/>

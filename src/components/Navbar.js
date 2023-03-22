@@ -38,7 +38,13 @@ const Navbar = () => {
                 Programming
               </Link>
             </div>
-          </div>
+          </div><Link className="nav-link active m-2" aria-current="page" to="/Login">
+                Login
+              </Link>
+              <span>|</span>
+              <Link className="nav-link active m-2" aria-current="page" to="/Register">
+              Register
+              </Link>
           <Link to="/cart">
             <svg
               width={25}

@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import BookData from "../data/books.json";
 import ProductSearchbar from "./ProductSearchbar";
 import ReadMore from "./ReadMore";
+import CartBooks from "./CartBooks";
 const Products = ({newBooks}) => {
   const [books, setBooks] = useState([]);
   useEffect(() => {
@@ -33,12 +35,14 @@ const Products = ({newBooks}) => {
                   <p className="card-text mb-auto">By : {book.authors} </p>
 
                   <div className="d-grid gap-2 d-md-flex justify-content-md-start mt-3">
-                    <button className="btn btn-primary btn-sm" type="button">
+                    <button className="btn btn-primary btn-sm" onClick={()=> CartBooks.addBook(book)} type="button">
                       Add
                     </button>
-                    <a className="btn btn-secondary btn-sm " onClick={(book) => { <ReadMore data={book} /> }} role="button">
+
+
+                    <Link className="btn btn-secondary btn-sm " to='/readmore' state={book} role="button">
                       Read More.
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
