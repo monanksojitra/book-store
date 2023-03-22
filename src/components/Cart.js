@@ -12,7 +12,7 @@ const Cart = () => {
   return (
     <>
       <Navbar />
-
+      
       <section className="h-100" style={{ backgroundColor: "#eee" }}>
         <div className="container h-100 py-5">
           <div className="row d-flex justify-content-center align-items-center h-100">
@@ -20,6 +20,7 @@ const Cart = () => {
               <div className="d-flex justify-content-between align-items-center mb-4">
                 <h3 className="fw-normal mb-0 text-black">Shopping Cart</h3>
               </div>
+          
               {books.map((bookData) => {
                 return (
                   <div className="card rounded-3 mb-4">
@@ -57,7 +58,12 @@ const Cart = () => {
                           </button>
                         </div>
                         <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                          <h5 className="mb-0">₹{bookData.pageCount}</h5>
+                          <h5 className="mb-0">
+                            ₹
+                            {bookData.pageCount < 1
+                              ? "234"
+                              : bookData.pageCount}
+                          </h5>
                         </div>
                         <div className="col-md-1 col-lg-1 col-xl-1 text-end">
                           <a href="#!" className="text-danger">
@@ -67,13 +73,13 @@ const Cart = () => {
                       </div>
                     </div>
                   </div>
-                );
-              })}
+                )}
+              )}
             </div>
           </div>
         </div>
       </section>
-    </>
+      </>
   );
 };
 

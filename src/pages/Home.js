@@ -9,7 +9,7 @@ const Home = () => {
   const [books, setBooks] = useState([]);
   return (
     <>
-      <Login />
+      
       <Navbar />
       <AdsBook />
       <ProductSearchbar filterbook={setBooks} />

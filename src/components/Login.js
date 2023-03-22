@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState ,Link } from "react";
 import logo from "../imgs/logo.png";
 const Login = () => {
-  const [showLogin, setShowLogin] = useState(false);
+  const [showLogin, setShowLogin] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [users, setUsers] = useState([]);
@@ -41,7 +41,7 @@ const Login = () => {
   return (
     <>
       {showLogin && (
-        <div className="text-center popup-container ">
+        <div className="text-center popup-container m-auto w-25 mt-5   ">
           <div className="form-signin popup">
             <form onSubmit={handleFormSubmit}>
 
@@ -81,7 +81,7 @@ const Login = () => {
               </button>
               <p className="mt-5 mb-3 text-muted">© 2022–2023</p>
             </form>
-            <button  className="w-50 btn btn-lg btn-primary" onClick={handleClose}>Close</button>
+            <button className="w-50 btn btn-lg btn-primary" onClick={handleClose}>Close</button>
           </div>
         </div>
       )}
