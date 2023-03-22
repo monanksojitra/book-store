@@ -4,12 +4,13 @@ import Login from "../components/Login";
 import Navbar from "../components/Navbar";
 import Products from "../components/Products";
 import ProductSearchbar from "../components/ProductSearchbar";
+import Toast from "../components/Toast";
 
 const Home = () => {
   const [books, setBooks] = useState([]);
   return (
     <>
-      
+      <Toast/>
       <Navbar />
       <AdsBook />
       <ProductSearchbar filterbook={setBooks} />
