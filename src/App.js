@@ -1,7 +1,8 @@
-import { React } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { React, useEffect } from "react";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import AddProduct from "./components/AddProduct";
-import Login from "./components/Login";
+
+
 
 // import LoginForm2 from "./component-test/LoginForm2"
 // import CounterHook from "./component-test/CounterHook";
@@ -22,6 +23,7 @@ import Registration from "./components/Registration";
 import Cart from "./components/Cart";
 import Home from "./pages/Home";
 import CategoryBook from "./components/CategoryBook";
+import Login from "./components/Login";
 
 // import Focusinput from "./component/Focusinput";
 // import LoginForm from "./component/LoginForm";
@@ -29,9 +31,12 @@ import CategoryBook from "./components/CategoryBook";
 // import RenderPropsCom from "./component/RenderPropsCom";
 
 import About from "./pages/About";
+import ReadMore from "./components/ReadMore";
 // import Home from "./pages/Home";
 
-function App() {
+const App = ()=> {
+  
+
   //   const [sethome, setAbout] = React.useState("Home");
 
   // const xchang = () => {
@@ -41,16 +46,22 @@ function App() {
   //     setAbout("Home");
   //   }
   // };
+  
+    
+ 
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/login" element={<Login />} />
+          
+          <Route path="/" exact element={<Home/>} />
+          
           <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login/>} />
           <Route path="/addproduct" element={<AddProduct />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/readmore" element={<ReadMore />} />
           <Route path="/Internet" element={<CategoryBook category="Internet"/>}/>
           <Route path="/Java" element={<CategoryBook category={"Java"} />} />
           <Route
@@ -92,6 +103,8 @@ function App() {
       {/* <UpdatedCounter_useReducer/> */}
       {/* <C1/> */}
     </>
-  );
+  )
+
 }
+
 export default App;

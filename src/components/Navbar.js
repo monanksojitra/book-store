@@ -1,13 +1,6 @@
-import React, { useState } from "react";
-import AdsBook from "./AdsBook";
-import Login from "./Login";
-import Products from "./Products";
-import Registration from "./Registration";
+import React from "react";
 import logo from "../imgs/logo.png";
-import AddProduct from "./AddProduct";
-import ProductSearchbar from "./ProductSearchbar";
-import ReadMore from "./ReadMore";
-import { BrowserRouter, Link, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Navbar = () => { 
   return (
     <>

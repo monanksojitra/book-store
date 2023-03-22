@@ -1,46 +1,38 @@
-.login-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 50px auto;
-    padding: 30px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    max-width: 500px;
-  }
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  padding-top: 30px;
+  left: 0;
+  top: 0;
+
+  background-color: rgba(0, 0, 0, 0.4);
+}
+form{
+  position: relative;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  width: 35%;
+  border: 1px solid #888;
   
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    margin: 10px 0;
-  }
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  margin-left: 30%;
+ 
   
-  label {
-    font-weight: bold;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="password"] {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    width: 100%;
-    margin-top: 5px;
-    box-sizing: border-box;
-  }
-  
-  button[type="submit"] {
-    background-color: #000000;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    font-size: 16px;
-    width: 70%;
-  }
-  
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
