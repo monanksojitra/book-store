@@ -1,6 +1,29 @@
-import React from 'react'
-
+import React from "react";
+import UserList from "./UserList";
 const Registration = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (!firstName || !lastName || !email || !password || !confirmPassword) {
+      setError("Please fill out all fields.");
+    } else if (password !== confirmPassword) {
+      setError("Passwords do not match.");
+    } else {
+      const userDetails = {
+        firstName,
+        lastName,
+        email,
+        password,
+      };
+      UserList.registerUser(userDetails); 
+    }
+  };
   return (
     <div
       className="modal modal-signin position-static d-block bg-secondary py-5"
@@ -11,7 +34,6 @@ const Registration = () => {
       <div className="modal-dialog" role="document">
         <div className="modal-content rounded-4 shadow">
           <div className="modal-header p-5 pb-4 border-bottom-0">
-            
             <h1 className="fw-bold mb-0 fs-2">Registration for free</h1>
             <button
               type="button"
@@ -21,12 +43,14 @@ const Registration = () => {
             />
           </div>
           <div className="modal-body p-5 pt-0">
-            <form className="">
+            <form  onSubmit={handleSubmit}>
               <div className="form-floating mb-3">
                 <input
                   type="text"
                   className="form-control rounded-3"
-                  id=""
+                  id="firstName"
+                  value={firstName}
+                  onChange={(event) => setFirstName(event.target.value)}
                   placeholder="monank"
                 />
                 <label htmlFor="floatingInput">First Name</label>
@@ -35,7 +59,9 @@ const Registration = () => {
                 <input
                   type="text"
                   className="form-control rounded-3"
-                  id=""
+                  id="lastName"
+                  value={lastName}
+                  onChange={(event) => setLastName(event.target.value)}
                   placeholder="Sojitra"
                 />
                 <label htmlFor="floatingInput">Last Name</label>
@@ -44,7 +70,9 @@ const Registration = () => {
                 <input
                   type="email"
                   className="form-control rounded-3"
-                  id="floatingInput"
+                  id="email"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
                   placeholder="name@example.com"
                 />
                 <label htmlFor="floatingInput">Email address</label>
@@ -53,7 +81,9 @@ const Registration = () => {
                 <input
                   type="password"
                   className="form-control rounded-3"
-                  id="floatingPassword"
+                  id="password"
+                  value={password}
+                  onChange={(event) => setPassword(event.target.value)}
                   placeholder="Password"
                 />
                 <label htmlFor="floatingPassword">Confirm Password</label>
@@ -62,7 +92,9 @@ const Registration = () => {
                 <input
                   type="password"
                   className="form-control rounded-3"
-                  id="floatingPassword"
+                  id="confirmPassword"
+                  value={confirmPassword}
+                  onChange={(event) => setConfirmPassword(event.target.value)}
                   placeholder="Password"
                 />
                 <label htmlFor="floatingPassword">Password</label>
@@ -74,17 +106,15 @@ const Registration = () => {
                 Register
               </button>
               <small className="text-muted">
-                By clicking Sign up, you agree to the terms of use.
+                By clicking register, you agree to the terms of use.
               </small>
               <hr />
-
             </form>
           </div>
         </div>
       </div>
     </div>
+  );
+};
 
-  )
-}
-
-export default Registration
+export default Registration;
