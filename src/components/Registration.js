@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import UserList from "./UserList";
+
+
 const Registration = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -10,6 +12,7 @@ const Registration = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    
     if (!firstName || !lastName || !email || !password || !confirmPassword) {
       setError("Please fill out all fields.");
     } else if (password !== confirmPassword) {
@@ -22,6 +25,7 @@ const Registration = () => {
         password,
       };
       UserList.registerUser(userDetails); 
+      console.log(userDetails)
     }
   };
   return (

@@ -13,6 +13,10 @@ const users = [
   },
 ];
 
+let currentUser = {
+  name: "guest",
+  email: "",
+};
 function registerUser(user) {
   const isUserExists = users.some((u) => u.email === user.email);
   if (isUserExists) {
@@ -25,14 +29,25 @@ function registerUser(user) {
     return "User registered successfully";
   }
 }
-
+console.log(users);
 function checkCredentials(email, password) {
   for (let user of users) {
     if (user.email === email && user.password === password) {
-      return user.username;
+      currentUser.name =  user.firstName;
+      currentUser.email = user.email;
+      console.log(currentUser)
+      return true
     }
   }
   return false;
 }
 
-export default { registerUser, checkCredentials };
+function getCurrentUser() {
+  return currentUser;
+}
+// function logout() {
+//   currentUser.name = "guest" ;
+//   currentUser.email = "";
+// }
+
+export default { registerUser, checkCredentials ,getCurrentUser};

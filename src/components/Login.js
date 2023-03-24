@@ -1,4 +1,4 @@
-import React, { useEffect, useState ,Link } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../imgs/logo.png";
 const Login = () => {
   const [showLogin, setShowLogin] = useState(true);
@@ -8,14 +8,15 @@ const Login = () => {
 
   useEffect(() => {
     const hasVisited = localStorage.getItem("visited");
+
     if (!hasVisited) {
       setShowLogin(true);
       localStorage.setItem("visited", "true");
       document.body.style.pointerEvents = "none";
-    document.body.style.opacity = 0.5;
+      document.body.style.opacity = 0.5;
     }
   }, []);
-  
+
   const handleClose = () => {
     setShowLogin(false);
     // Re-enable background window
@@ -30,13 +31,12 @@ const Login = () => {
     setUsers([...users, user]);
     // Once login is successful, close the popup and re-enable background window
     handleClose();
-  // const handleLogin = () => {
-  //   setShowLogin(true);
-  //   // Disable background window
-  //   document.body.style.pointerEvents = "none";
-  //   document.body.style.opacity = 0.5;
-  // };
-
+    // const handleLogin = () => {
+    //   setShowLogin(true);
+    //   // Disable background window
+    //   document.body.style.pointerEvents = "none";
+    //   document.body.style.opacity = 0.5;
+    // };
   };
   return (
     <>
@@ -44,7 +44,6 @@ const Login = () => {
         <div className="text-center popup-container m-auto w-25 mt-5   ">
           <div className="form-signin popup">
             <form onSubmit={handleFormSubmit}>
-
               <img
                 className="mb-2"
                 src={logo}
@@ -81,10 +80,14 @@ const Login = () => {
               </button>
               <p className="mt-5 mb-3 text-muted">© 2022–2023</p>
             </form>
-            <button className="w-50 btn btn-lg btn-primary" onClick={handleClose}>Close</button>
+            <button
+              className="w-50 btn btn-lg btn-primary"
+              onClick={handleClose}
+            >
+              Close
+            </button>
           </div>
         </div>
-      
       )}
     </>
   );

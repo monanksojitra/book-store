@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../imgs/logo.png";
+import logo_il from "../imgs/logo_il.jpg";
 import { Link } from "react-router-dom";
+import UserList from "./UserList";
 const Navbar = () => {
+  const[currentUser,setcurrentUser]= useState({
+    name:"guest",
+    email:""
+  })
+  let count = currentUser.name.length + currentUser.email.length;
+  useEffect(()=>{
+    const user = UserList.getCurrentUser()
+    setcurrentUser({
+      name:user.name,
+      email: user.email
+    })
+    console.log("from state",currentUser)
+    console.log("from user list",user)
+    console.log("count ",count)
+  },[])
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -63,7 +80,7 @@ const Navbar = () => {
                 data-bs-toggle="dropdown"
               >
                 <img
-                  src="https://github.com/mdo.png"
+                  src={logo_il}
                   alt="mdo"
                   width={32}
                   height={32}
@@ -71,14 +88,14 @@ const Navbar = () => {
                 />
               </a>
               <ul className="dropdown-menu text-small shadow">
-                <li>
-                  <Link className="dropdown-item" href="#">
-                    New project...
+                <li >
+                  <Link className="dropdown-item" >
+                    <p className="fw-bold m-0 p-0">{currentUser.name}</p>
                   </Link>
                 </li>
                 <li>
                   <Link className="dropdown-item" href="#">
-                    Settings
+                  <p className="fw-bold m-0 p-0">{currentUser.email}</p>
                   </Link>
                 </li>
                 <li>
@@ -90,7 +107,7 @@ const Navbar = () => {
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a className="dropdown-item"  role="button">
                     Sign out
                   </a>
                 </li>
