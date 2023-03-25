@@ -1,16 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import AdsBook from "../components/AdsBook";
 import Login from "../components/Login";
 import Navbar from "../components/Navbar";
 import Products from "../components/Products";
 import ProductSearchbar from "../components/ProductSearchbar";
-import Toast from "../components/Toast";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Home = () => {
   const [books, setBooks] = useState([]);
   return (
     <>
-      <Toast/>
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
+      <Login />
       <Navbar />
       <AdsBook />
       <ProductSearchbar filterbook={setBooks} />
