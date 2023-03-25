@@ -4,21 +4,21 @@ import logo_il from "../imgs/logo_il.jpg";
 import { Link } from "react-router-dom";
 import UserList from "./UserList";
 const Navbar = () => {
-  const[currentUser,setcurrentUser]= useState({
-    name:"guest",
-    email:""
-  })
+  const [currentUser, setcurrentUser] = useState({
+    name: "guest",
+    email: "",
+  });
   let count = currentUser.name.length + currentUser.email.length;
-  useEffect(()=>{
-    const user = UserList.getCurrentUser()
+  useEffect(() => {
+    const user = UserList.getCurrentUser();
     setcurrentUser({
-      name:user.name,
-      email: user.email
-    })
-    console.log("from state",currentUser)
-    console.log("from user list",user)
-    console.log("count ",count)
-  },[])
+      name: user.name,
+      email: user.email,
+    });
+    console.log("from state", currentUser);
+    console.log("from user list", user);
+    console.log("count ", count);
+  }, []);
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -55,13 +55,8 @@ const Navbar = () => {
                 Programming
               </Link>
             </div>
-          </div><Link className="nav-link active m-2" aria-current="page" to="/Login">
-                Login
-              </Link>
-              <span>|</span>
-              <Link className="nav-link active m-2" aria-current="page" to="/Register">
-              Register
-              </Link>
+          </div>
+
           <Link to="/cart">
             <svg
               width={25}
@@ -75,7 +70,6 @@ const Navbar = () => {
           <div className="d-flex align-items-center">
             <div className="flex-shrink-0 dropstart">
               <a
-                href="#"
                 className="d-block link-dark text-decoration-none dropdown-toggle"
                 data-bs-toggle="dropdown"
               >
@@ -88,26 +82,26 @@ const Navbar = () => {
                 />
               </a>
               <ul className="dropdown-menu text-small shadow">
-                <li >
-                  <Link className="dropdown-item" >
+                <li>
+                  <Link className="dropdown-item">
                     <p className="fw-bold m-0 p-0">{currentUser.name}</p>
                   </Link>
                 </li>
                 <li>
                   <Link className="dropdown-item" href="#">
-                  <p className="fw-bold m-0 p-0">{currentUser.email}</p>
+                    <p className="fw-bold m-0 p-0">{currentUser.email}</p>
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" href="#">
-                    Profile
+                  <Link className="dropdown-item" to="/Register">
+                    Register
                   </Link>
                 </li>
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <a className="dropdown-item"  role="button">
+                  <a className="dropdown-item" role="button">
                     Sign out
                   </a>
                 </li>

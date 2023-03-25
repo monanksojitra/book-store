@@ -2,10 +2,9 @@ import React, { useState, useEffect, Link } from "react";
 import { Modal } from "react-bootstrap";
 import UserList from "./UserList";
 import logo from "../imgs/logo.png";
-import Toastjs from "./Toast";
+import Toast from "./Toast";
 
-
-function Toast() {
+function Login() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -13,10 +12,9 @@ function Toast() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const currentUser = UserList.getCurrentUser();
   useEffect(() => {
     setTimeout(() => {
-      const currentUser = UserList.getCurrentUser();
-
       if (currentUser.name === "guest") {
         handleShow();
         const hasVisited = localStorage.getItem("visited");
@@ -34,22 +32,17 @@ function Toast() {
   const handleFormSubmit = (event) => {
     event.preventDefault();
     if (UserList.checkCredentials(email, password)) {
-      Toastjs.success("User Login successfully");
+      Toast.success("User Login successfully");
+      handleClose();
     } else {
-      Toastjs.error("User Login unsuccessful");
+      Toast.error("User Login unsuccessful");
     }
-    handleClose();
   };
 
   return (
     <>
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header
-          closeButton
-          onClick={() => {
-            <Toast message="Login is not active" />;
-          }}
-        ></Modal.Header>
+        <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
           {showLogin && (
             <div className="text-center popup-container mx-5">
@@ -105,4 +98,4 @@ function Toast() {
   );
 }
 
-export default Toast;
+export default Login;

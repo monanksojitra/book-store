@@ -1,8 +1,6 @@
-import { React, useEffect } from "react";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { React } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AddProduct from "./components/AddProduct";
-
-
 
 // import LoginForm2 from "./component-test/LoginForm2"
 // import CounterHook from "./component-test/CounterHook";
@@ -18,7 +16,6 @@ import AddProduct from "./components/AddProduct";
 // import RegisterUser from "./component-test/RegisterUser";
 // import NewForm from "./component-test/NewForm";
 // import UpdatedCounter_useReducer from "./component-test/UpdatedCounter_useReducer";
-import Navbar from "./components/Navbar";
 import Registration from "./components/Registration";
 import Cart from "./components/Cart";
 import Home from "./pages/Home";
@@ -34,9 +31,7 @@ import About from "./pages/About";
 import ReadMore from "./components/ReadMore";
 // import Home from "./pages/Home";
 
-const App = ()=> {
-  
-
+const App = () => {
   //   const [sethome, setAbout] = React.useState("Home");
 
   // const xchang = () => {
@@ -46,24 +41,24 @@ const App = ()=> {
   //     setAbout("Home");
   //   }
   // };
-  
-    
- 
+
   return (
     <>
       <BrowserRouter>
         <Routes>
-          
-          <Route path="/" exact element={<Home/>} />
-          
+          <Route path="/" exact element={<Home />} />
+
           <Route path="/about" element={<About />} />
-          <Route path="/Login" element={<Login/>} />
-          
+          <Route path="/Login" element={<Login />} />
+
           <Route path="/addproduct" element={<AddProduct />} />
           <Route path="/Register" element={<Registration />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/readmore" element={<ReadMore />} />
-          <Route path="/Internet" element={<CategoryBook category="Internet"/>}/>
+          <Route
+            path="/Internet"
+            element={<CategoryBook category="Internet" />}
+          />
           <Route path="/Java" element={<CategoryBook category={"Java"} />} />
           <Route
             path="/PowerBuilder"
@@ -104,8 +99,7 @@ const App = ()=> {
       {/* <UpdatedCounter_useReducer/> */}
       {/* <C1/> */}
     </>
-  )
-
-}
+  );
+};
 
 export default App;
