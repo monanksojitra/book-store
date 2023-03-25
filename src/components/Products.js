@@ -49,6 +49,7 @@ const Products = ({ newBooks }) => {
               </button>
 
               <Link
+              id="#readmore"
                 className="btn btn-secondary btn-sm "
                 to="/readmore"
                 state={book}
@@ -80,7 +81,7 @@ const Products = ({ newBooks }) => {
   calculatePagesToDisplay();
   return (
     <>
-      <div className="row mb-4 mx-5">{renderBooks()}</div>
+      <div id="books" className="row mb-4 mx-5">{renderBooks()}</div>
       <div className="pagination justify-content-center">
         <Pagination>
           <Pagination.Prev

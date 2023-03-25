@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid mx-3 my-1">
+        <div id="home" className="container-fluid mx-3 my-1">
           <a className="navbar-brand" href="#">
             <img src={logo} height={50} />
           </a>
