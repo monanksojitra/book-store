@@ -7,11 +7,11 @@ import ProductSearchbar from "../components/ProductSearchbar";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "../components/Footer";
+import { GlobalProvider } from "../components/GlobalProvider";
 
 const Home = () => {
-  const [books, setBooks] = useState([]);
   return (
-    <>
+    <GlobalProvider>
       <ToastContainer
         position="top-right"
         autoClose={2000}
@@ -24,13 +24,13 @@ const Home = () => {
         pauseOnHover
         theme="dark"
       />
-      <Login />
+      {/* <Login /> */}
       <Navbar />
       <AdsBook />
-      <ProductSearchbar filterbook={setBooks} />
-      <Products newBooks={books} />
-      <Footer/>
-    </>
+      <ProductSearchbar/>
+      <Products/>
+      <Footer />
+    </GlobalProvider>
   );
 };
 

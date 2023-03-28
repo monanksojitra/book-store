@@ -1,17 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, {  useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import BookData from "../data/books.json";
 import { Pagination } from "react-bootstrap";
 import CartBooks from "./CartBooks";
-const Products = ({ newBooks }) => {
-  const [books, setBooks] = useState([]);
-  useEffect(() => {
-    newBooks.length == 0 ? setBooks(BookData) : setBooks(newBooks);
-  }, [newBooks.length]);
+import { GlobalContext } from "./GlobalProvider";
 
+
+const Products = () => {
+  const {books} = useContext(GlobalContext)
+  const[booksList , setBookList]=useState(books[0])  
   const [activePage, setActivePage] = useState(1);
   const booksPerPage = 10;
-  const totalPages = Math.ceil(books.length / booksPerPage);
+  const totalPages = Math.ceil(booksList.length / booksPerPage);
   const pageNumbersToShow = 5;
   const pagesToDisplay = [];
 
@@ -22,7 +21,7 @@ const Products = ({ newBooks }) => {
   const renderBooks = () => {
     const startIndex = (activePage - 1) * booksPerPage;
     const endIndex = startIndex + booksPerPage;
-    return books.slice(startIndex, endIndex).map((book) => (
+    return booksList.slice(startIndex, endIndex).map((book) => (
       <div id={book.isbn} className="col-md-6">
         <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
           <div className="col-auto d-none d-lg-block mx-3 my-2">
