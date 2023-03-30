@@ -1,44 +1,43 @@
-<h1>Book-Store React Web Application</h1>
-  <p>This is a web application for a book store built using React. It allows users to view, search and buy books online. The application has the following features:</p>
-  <ul>
-    <li>View all books available in the store</li>
-    <li>Search for books based on title, author or category</li>
-    <li>Sort books by price or popularity</li>
-    <li>Add books to the cart</li>
-    <li>Checkout the cart and make a payment</li>
-    <li>View the order history</li>
-  </ul>
-  <p>The application is built using the following technologies:</p>
-  <ul>
-    <li>React for building the user interface</li>
-    <li>React Router for handling client-side routing</li>
-    <li>Redux for managing the state of the application</li>
-    <li>Axios for making HTTP requests to the server</li>
-    <li>Express for building the server-side application</li>
-    <li>MongoDB for storing the data</li>
-  </ul>
-  <h2>Installation</h2>
-  <p>To run the application on your local machine, follow these steps:</p>
-  <ol>
-    <li>Clone the repository</li>
-    <code>git clone https://github.com/monanksojitra/book-store.git</code>
-    <li>Navigate to the directory</li>
-    <code>cd book-store</code>
-    <li>Install the dependencies</li>
-    <code>npm install</code>
-    <li>Start the development server</li>
-    <code>npm start</code>
-    <li>Open your browser and navigate to <code>http://localhost:3000/</code> to view the application.</li>
-  </ol>
-  <h2>Usage</h2>
-  <p>The application is easy to use and intuitive. To view all the available books, click on the "All Books" button in the navigation bar. To search for a book, type the title, author or category in the search bar and hit enter. To sort the books, select the desired option from the dropdown menu. To add a book to the cart, click on the "Add to Cart" button. To checkout the cart, click on the cart icon in the navigation bar and follow the prompts to make a payment. To view the order history, click on the "Order History" button in the navigation bar.</p>
-  <h2>Contributing</h2>
-  <p>If you would like to contribute to the project, please follow these steps:</p>
-  <ol>
-    <li>Fork the repository</li>
-    <li>Clone the forked repository</li>
-    <li>Create a new branch for your feature or bugfix</li>
-    <li>Make the necessary changes and commit them</li>
-    <li>Push the changes to your forked repository</li>
-    <li>Submit a pull request to the original repository</li>
-  </ol>
+<!-- Online Book Store React Project Description -->
+
+<!-- Headers -->
+<h1 style="font-size: 36px; font-weight: bold; color: #2196F3; margin-bottom: 10px;">Online Book Store React Project</h1>
+
+<h2 style="font-size: 24px; font-weight: bold; color: #009688; margin-bottom: 10px;">Description</h2>
+
+<!-- Paragraphs -->
+<p style="font-size: 16px; line-height: 1.5; color: #333; margin-bottom: 20px;">This is an online book store React project that allows users to browse through a collection of books, add them to their cart, and place an order. The project includes features such as user authentication, book search functionality, and payment integration using Stripe API.</p>
+
+<h2 style="font-size: 24px; font-weight: bold; color: #009688; margin-bottom: 10px;">Features</h2>
+
+<!-- Features List -->
+<ul style="font-size: 16px; line-height: 1.5; color: #333; margin-bottom: 20px;">
+  <li>User authentication with Firebase</li>
+  <li>Book search functionality using Google Books API</li>
+  <li>Cart management using React Context API</li>
+  <li>Payment integration using Stripe API</li>
+  <li>Responsive design using CSS Grid and Flexbox</li>
+</ul>
+
+<h2 style="font-size: 24px; font-weight: bold; color: #009688; margin-bottom: 10px;">Demo</h2>
+
+<!-- Demo Video -->
+<div>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<h2 style="font-size: 24px; font-weight: bold; color: #009688; margin-bottom: 10px;">Getting Started</h2>
+
+<!-- Getting Started Instructions -->
+<ol style="font-size: 16px; line-height: 1.5; color: #333; margin-bottom: 20px;">
+  <li>Clone the repository</li>
+  <li>Install dependencies using <code>npm install</code></li>
+  <li>Create a new Firebase project and configure it</li>
+  <li>Create a new Stripe account and obtain an API key</li>
+  <li>Run the project using <code>npm start</code></li>
+</ol>
+
+<h2 style="font-size: 24px; font-weight: bold; color: #009688; margin-bottom: 10px;">License</h2>
+
+<!-- License Information -->
+<p style="font-size: 16px; line-height: 1.5; color: #333; margin-bottom: 20px;">This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
