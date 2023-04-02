@@ -3,28 +3,22 @@ import { GlobalContext } from "./GlobalProvider";
 
 const BookSearch = () => {
   const { setBooks, books } = useContext(GlobalContext);
+ 
   const [query, setQuery] = useState("");
-  const [filteredBooks, setFilteredBooks] = useState(books[0]);
-useEffect(()=>{
-
-},[query.length])
+  const [allBooks, setAllbooks] = useState(books);
   const handleInputChange = (event) => {
     const inputValue = event.target.value;
-    console.log(inputValue)
     setQuery(inputValue);
-    const filteredBook = filteredBooks.filter((book) => {
-      console.log(book)
-      const titleMatch = book.title
-        .toString()
-        .toLowerCase()
-        .includes(inputValue.toLowerCase());
-      const authorMatch = book.authors
-        .toString()
-        .toLowerCase()
-        .includes(inputValue.toLowerCase());
-      return titleMatch || authorMatch;
+    const filteredBook = allBooks.filter((book) => {
+      return book.title
+      .toString()
+      .toLowerCase()
+      .includes(inputValue.toLowerCase()) || book.authors
+      .toString()
+      .toLowerCase()
+      .includes(inputValue.toLowerCase())
     });
-    setFilteredBooks(filteredBook);
+    // console.log(filteredBook)
     setBooks(filteredBook);
   };
 
@@ -39,16 +33,15 @@ useEffect(()=>{
       >
         <span className="fs-4">List of All Books</span>
       </a>
-      <form className="col-12 col-lg-auto mb-3 mb-lg-0" role="search">
+      <div className="col-12 col-lg-auto mb-3 mb-lg-0" role="search">
         <input
           type="search"
-          value={query}
           className="form-control"
           placeholder="Search..."
           aria-label="Search"
           onChange={handleInputChange}
         />
-      </form>
+      </div>
     </div>
   );
 };

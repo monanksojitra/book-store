@@ -8,7 +8,7 @@ const Navbar = () => {
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div id="home" className="container-fluid mx-3 my-1">
-          <Link className="navbar-brand" to="/x">
+          <Link className="navbar-brand" to="/">
             <img src={logo} height={50} />
           </Link>
           <button

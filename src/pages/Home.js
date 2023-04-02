@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import AdsBook from "../components/AdsBook";
 import Login from "../components/Login";
 import Navbar from "../components/Navbar";
@@ -7,11 +7,12 @@ import ProductSearchbar from "../components/ProductSearchbar";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "../components/Footer";
-import { GlobalProvider } from "../components/GlobalProvider";
+import { GlobalContext } from "../components/GlobalProvider";
 
 const Home = () => {
+  const {books} = useContext(GlobalContext)
   return (
-    <GlobalProvider>
+   <>
       <ToastContainer
         position="top-right"
         autoClose={2000}
@@ -24,13 +25,13 @@ const Home = () => {
         pauseOnHover
         theme="dark"
       />
-      {/* <Login /> */}
+      <Login />
       <Navbar />
       <AdsBook />
-      <ProductSearchbar/>
-      <Products/>
+      <ProductSearchbar />
+      <Products books={books}/>
       <Footer />
-    </GlobalProvider>
+      </>
   );
 };
 

@@ -29,6 +29,7 @@ import Login from "./components/Login";
 
 import About from "./pages/About";
 import ReadMore from "./components/ReadMore";
+import { GlobalProvider } from "./components/GlobalProvider";
 // import Home from "./pages/Home";
 
 const App = () => {
@@ -44,32 +45,34 @@ const App = () => {
 
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" exact element={<Home />} />
+      <GlobalProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" exact element={<Home />} />
 
-          <Route path="/about" element={<About />} />
-          <Route path="/Login" element={<Login />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/Login" element={<Login />} />
 
-          <Route path="/addproduct" element={<AddProduct />} />
-          <Route path="/Register" element={<Registration />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/readmore" element={<ReadMore />} />
-          <Route
-            path="/Internet"
-            element={<CategoryBook category="Internet" />}
-          />
-          <Route path="/Java" element={<CategoryBook category={"Java"} />} />
-          <Route
-            path="/PowerBuilder"
-            element={<CategoryBook category={"PowerBuilder"} />}
-          />
-          <Route
-            path="/Programming"
-            element={<CategoryBook category={"Programming"} />}
-          />
-        </Routes>
-      </BrowserRouter>
+            <Route path="/addproduct" element={<AddProduct />} />
+            <Route path="/Register" element={<Registration />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/readmore" element={<ReadMore />} />
+            <Route
+              path="/Internet"
+              element={<CategoryBook category="Internet" />}
+            />
+            <Route path="/Java" element={<CategoryBook category={"Java"} />} />
+            <Route
+              path="/PowerBuilder"
+              element={<CategoryBook category={"PowerBuilder"} />}
+            />
+            <Route
+              path="/Programming"
+              element={<CategoryBook category={"Programming"} />}
+            />
+          </Routes>
+        </BrowserRouter>
+      </GlobalProvider>
 
       {/* <Navbar/>  */}
 

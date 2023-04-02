@@ -1,21 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import UserList from "./UserList";
+
 import logo_il from "../imgs/logo_il.jpg";
+import { GlobalContext } from "./GlobalProvider";
 
 const UserInfo = () => {
-  const [currentUser, setcurrentUser] = useState({
-    name: "guest",
-    email: "",
-  });
-  let count = currentUser.name.length + currentUser.email.length;
-  useEffect(() => {
-    const user = UserList.getCurrentUser();
-    setcurrentUser({
-      name: user.name,
-      email: user.email,
-    });
-  }, [count]);
+  const {currentUser , signout} = useContext(GlobalContext);
+  console.log(currentUser)
+
   return (
     <div className="d-flex align-items-center">
       <div className="flex-shrink-0 dropstart">
@@ -51,14 +43,14 @@ const UserInfo = () => {
             <hr className="dropdown-divider" />
           </li>
           <li>
-            <a className="dropdown-item" role="button">
+            <a onClick={()=>signout} className="dropdown-item" role="button">
               Sign out
             </a>
           </li>
         </ul>
       </div>
     </div>
-  );
+  )
 };
 
 export default UserInfo;

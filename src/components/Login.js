@@ -1,10 +1,12 @@
-import React, { useState, useEffect, Link } from "react";
+import React, { useState, useEffect, Link, useContext } from "react";
 import { Modal } from "react-bootstrap";
-import UserList from "./UserList";
 import logo from "../imgs/logo.png";
+import { GlobalContext } from "./GlobalProvider";
 import Toast from "./Toast";
 
 function Login() {
+  const globalProvider = useContext(GlobalContext);
+  const { currentUser , checkCredentials } = globalProvider
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -12,7 +14,7 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const currentUser = UserList.getCurrentUser();
+ 
   useEffect(() => {
     setTimeout(() => {
       if (currentUser.name === "guest") {
@@ -31,7 +33,7 @@ function Login() {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    if (UserList.checkCredentials(email, password)) {
+    if (checkCredentials(email, password)) {
       Toast.success("User Login successfully");
       handleClose();
     } else {

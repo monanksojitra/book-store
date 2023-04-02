@@ -1,8 +1,10 @@
-import React, { useState } from "react";
-import UserList from "./UserList";
+import React, { useContext, useState } from "react";
+import { GlobalContext } from "./GlobalProvider";
 
 
 const Registration = () => {
+
+  const {registerUser} = useContext(GlobalContext)
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -24,7 +26,7 @@ const Registration = () => {
         email,
         password,
       };
-      UserList.registerUser(userDetails); 
+      registerUser(userDetails); 
       console.log(userDetails)
     }
   };

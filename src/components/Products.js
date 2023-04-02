@@ -1,16 +1,15 @@
-import React, {  useContext, useState } from "react";
+import React, {  useState } from "react";
 import { Link } from "react-router-dom";
 import { Pagination } from "react-bootstrap";
 import CartBooks from "./CartBooks";
-import { GlobalContext } from "./GlobalProvider";
 
 
-const Products = () => {
-  const {books} = useContext(GlobalContext)
-  const[booksList , setBookList]=useState(books[0])  
+const Products = ({books}) => {
+  
+  
   const [activePage, setActivePage] = useState(1);
   const booksPerPage = 10;
-  const totalPages = Math.ceil(booksList.length / booksPerPage);
+  const totalPages = Math.ceil(books.length / booksPerPage);
   const pageNumbersToShow = 5;
   const pagesToDisplay = [];
 
@@ -21,7 +20,8 @@ const Products = () => {
   const renderBooks = () => {
     const startIndex = (activePage - 1) * booksPerPage;
     const endIndex = startIndex + booksPerPage;
-    return booksList.slice(startIndex, endIndex).map((book) => (
+    return books.length!=0?
+       books.slice(startIndex, endIndex).map((book) => (
       <div id={book.isbn} className="col-md-6">
         <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
           <div className="col-auto d-none d-lg-block mx-3 my-2">
@@ -60,7 +60,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-    ));
+    )): <h3>book is not available</h3>
   };
 
   const calculatePagesToDisplay = () => {
@@ -78,9 +78,9 @@ const Products = () => {
     }
   };
   calculatePagesToDisplay();
-  return (
-    <>
-      <div id="books" className="row mb-4 mx-5">{renderBooks()}</div>
+  return (<>
+    <div id="books" className="row mb-4 mx-5">{renderBooks()}</div>
+    {books.length!=0?
       <div className="pagination justify-content-center">
         <Pagination>
           <Pagination.Prev
@@ -102,7 +102,8 @@ const Products = () => {
           />
         </Pagination>
       </div>
-    </>
+       : null}
+       </>
   );
 };
 export default Products;

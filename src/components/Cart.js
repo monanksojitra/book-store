@@ -1,17 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import "../css/cart.css";
 
 import Navbar from "./Navbar";
-import CartBooks from "./CartBooks";
-import { Link } from "react-router-dom";
+import { GlobalContext } from "./GlobalProvider";
 
 const Cart = () => {
-  const [books, setBooks] = useState([]);
-  useEffect(() => {
-    const data = CartBooks.getBooks();
-    setBooks(data);
-  }, [books.length]);
-
+  const {currentUser} = useContext(GlobalContext)
+  console.log(currentUser)
   return (
     <>
       <Navbar />
@@ -82,7 +77,7 @@ const Cart = () => {
           </div>
         </div>
       </section> */}
-      <div className="container my-1">
+      {/* <div className="container my-1">
         <div className="wrapper wrapper-content animated fadeInRight">
           <div className="row">
             <div className="col-md-9">
@@ -90,11 +85,11 @@ const Cart = () => {
                 <div className="ibox-title d-flex">
                   <h5 className="mx-2">Items in your cart</h5>
                   <span className="pull-right">
-                    (<strong>{books.length}</strong>) items
+                    (<strong>{bookCart.length}</strong>) items
                   </span>
                 </div>
-                {!books.length == 0 ? (
-                  books.map((bookData) => (
+                {!bookCart.length == 0 ? (
+                  bookCart.map((bookData) => (
                     <div className="ibox-content">
                       <div className="table-responsive">
                         <table className="table shoping-cart-table">
@@ -169,7 +164,7 @@ const Cart = () => {
                 )}
               </div>
             </div>
-            {!books.length == 0 ? (
+            {!bookCart.length == 0 ? (
               <div className="col-md-3">
                 <div className="ibox">
                   <div className="ibox-title">
@@ -213,7 +208,7 @@ const Cart = () => {
             ) : null}
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
