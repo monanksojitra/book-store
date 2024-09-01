@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.00d4e1ad.css",
+    "main.js": "/static/js/main.f8228370.js",
+    "static/media/logo_il.jpg": "/static/media/logo_il.a5da18c2c82c3c05b359.jpg",
+    "static/media/logo.png": "/static/media/logo.d4e2a5e23a2e990e35fd.png",
+    "index.html": "/index.html",
+    "main.00d4e1ad.css.map": "/static/css/main.00d4e1ad.css.map",
+    "main.f8228370.js.map": "/static/js/main.f8228370.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.00d4e1ad.css",
+    "static/js/main.f8228370.js"
+  ]
+}
