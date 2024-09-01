@@ -5,7 +5,6 @@ import { Newuser } from './C1'
 function C3() {
   const [count,setCount] = useState(0)
   const perentcontext = useContext(Newuser)
-  console.log('child 3 render')
   return (
     <div>
          <button onClick={()=>{setCount(pre=>pre+1)}}>{count} child 3</button>

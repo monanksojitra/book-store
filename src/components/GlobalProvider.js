@@ -58,7 +58,6 @@ export const GlobalProvider = ({ children }) => {
   };
   const removeBook = (id) => {
     setBookCart([books.filter((book) => book.id !== id)]);
-    console.log("remove");
     Toast.warn("Book Remove..!");
   };
 

@@ -27,12 +27,11 @@ const Registration = () => {
         password,
       };
       registerUser(userDetails); 
-      console.log(userDetails)
     }
   };
   return (
     <div
-      className="modal modal-signin position-static d-block bg-secondary py-5"
+      className="modal modal-signin position-static d-block bg-secondary"
       tabIndex={-1}
       role="dialog"
       id="modalSignin"

@@ -1,21 +1,18 @@
 import Toast from "./Toast";
 let books = [];
 
-
 function addBook(book) {
   books.push(book);
-  Toast.info("Book is added..!")
-  console.log(books)
+  Toast.info("Book is added..!");
 }
 
 function removeBook(id) {
-  books = books.filter(book => book.id !== id)
-  console.log("remove")
-  Toast.warn("Book Remove..!")
+  books = books.filter((book) => book.id !== id);
+  Toast.warn("Book Remove..!");
 }
 
 function getBooks() {
   return books;
 }
 
-export default { addBook , removeBook , getBooks };
+export { addBook, removeBook, getBooks };

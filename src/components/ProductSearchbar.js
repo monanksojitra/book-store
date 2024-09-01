@@ -18,7 +18,6 @@ const BookSearch = () => {
       .toLowerCase()
       .includes(inputValue.toLowerCase())
     });
-    // console.log(filteredBook)
     setBooks(filteredBook);
   };
 

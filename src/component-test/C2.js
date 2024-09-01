@@ -6,7 +6,6 @@ function C2() {
   // const user = useContext(Usercontext)
   const perentcontext = useContext(Newuser)
   const [count,setCount] = useState(0)
-  console.log('child 2 render')
   return (
     <div>
       <p>This is count by perent in C2 {perentcontext}</p>

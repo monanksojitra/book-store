@@ -6,8 +6,6 @@ import { GlobalContext } from "./GlobalProvider";
 
 const UserInfo = () => {
   const {currentUser , signout} = useContext(GlobalContext);
-  console.log(currentUser)
-
   return (
     <div className="d-flex align-items-center">
       <div className="flex-shrink-0 dropstart">

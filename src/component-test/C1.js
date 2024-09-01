@@ -6,7 +6,6 @@ export const Newuser = React.createContext('this is defult context')
 export default function C1() {
   const user = useContext(Usercontext)
   const [count,setCount] = useState(0)
-  console.log('prent render')
   
   return (
  

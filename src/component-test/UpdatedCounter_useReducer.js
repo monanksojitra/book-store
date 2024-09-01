@@ -20,7 +20,6 @@ function UpdatedCounter_useReducer() {
     
         const [count, dispatch] = useReducer(reducr, reset)
         useEffect(() => {
-           console.log('re-runder')
           },[]);
     
     return (

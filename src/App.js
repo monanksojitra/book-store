@@ -30,6 +30,8 @@ import Login from "./components/Login";
 import About from "./pages/About";
 import ReadMore from "./components/ReadMore";
 import { GlobalProvider } from "./components/GlobalProvider";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 // import Home from "./pages/Home";
 
 const App = () => {
@@ -47,8 +49,10 @@ const App = () => {
     <>
       <GlobalProvider>
         <BrowserRouter>
+          <Navbar />
+
           <Routes>
-            <Route path="/" exact element={<Home />} />
+            <Route path="/book_store" exact element={<Home />} />
 
             <Route path="/about" element={<About />} />
             <Route path="/Login" element={<Login />} />
@@ -71,6 +75,7 @@ const App = () => {
               element={<CategoryBook category={"Programming"} />}
             />
           </Routes>
+          <Footer />
         </BrowserRouter>
       </GlobalProvider>
 

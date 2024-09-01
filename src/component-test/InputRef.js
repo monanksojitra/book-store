@@ -8,7 +8,6 @@ class InputRef extends Component {
       }  
       inputfs(){
           this.chRef.current.focus()
-          console.log("focus on")
       }
   render() {
     

@@ -12,12 +12,10 @@ function PostDetail() {
         setdata(Response.data);
       })
       .catch((erre) => {
-        console.log(erre);
       });
 
  
   }, [id]);
-  console.log(data);
 
 return (<>
   <div>

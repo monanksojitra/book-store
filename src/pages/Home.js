@@ -10,9 +10,9 @@ import Footer from "../components/Footer";
 import { GlobalContext } from "../components/GlobalProvider";
 
 const Home = () => {
-  const {books} = useContext(GlobalContext)
+  const { books } = useContext(GlobalContext);
   return (
-   <>
+    <>
       <ToastContainer
         position="top-right"
         autoClose={2000}
@@ -26,12 +26,10 @@ const Home = () => {
         theme="dark"
       />
       <Login />
-      <Navbar />
       <AdsBook />
       <ProductSearchbar />
-      <Products books={books}/>
-      <Footer />
-      </>
+      <Products books={books} />
+    </>
   );
 };
 
