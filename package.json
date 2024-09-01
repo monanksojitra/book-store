@@ -1,6 +1,7 @@
 {
   "name": "book-store",
   "version": "0.1.0",
+  "homepage": "/book-store",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -23,7 +24,7 @@
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
-    "predeploy": "npm run build",
+    "predeploy": "react-scripts --openssl-legacy-provider build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -24,7 +24,7 @@ const ReadMore = () => {
                 <div className="product p-4">
                   <div className="d-flex justify-content-between align-items-center">
                     <div className="d-flex align-items-center">
-                      <Link to="/" className="ml-1 nav-link active">
+                      <Link to="/book-store" className="ml-1 nav-link active">
                         <i className="fa fa-long-arrow-left" />
                       </Link>
                     </div>
