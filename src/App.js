@@ -52,7 +52,7 @@ const App = () => {
           <Navbar />
 
           <Routes>
-            <Route path="/" exact element={<Home />} />
+            <Route path="/book-store" exact element={<Home />} />
 
             <Route path="/about" element={<About />} />
             <Route path="/Login" element={<Login />} />
