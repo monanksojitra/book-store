@@ -8,7 +8,7 @@ const Navbar = () => {
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div id="home" className="container-fluid mx-3 my-1">
-          <Link className="navbar-brand" to="/book_store">
+          <Link className="navbar-brand" to="/">
             <img src={logo} height={50} />
           </Link>
           <button
@@ -24,11 +24,7 @@ const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              <Link
-                className="nav-link active"
-                aria-current="page"
-                to="/book_store"
-              >
+              <Link className="nav-link active" aria-current="page" to="/">
                 Home
               </Link>
               <Link className="nav-link" to="/Internet">
